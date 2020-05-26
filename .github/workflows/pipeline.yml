@@ -85,13 +85,13 @@ jobs:
       run: docker push eu.gcr.io/${{ secrets.GCLOUD_PROJECT }}/${{ secrets.GCLOUD_APP_NAME }}
 
     # Deploy image to Cloud Run
-    # - name: Deploy
-    #   run: |-
-    #     echo "deploy to cloud run $CLOUD_RUN_NAME" && \
-    #     gcloud run deploy "$CLOUD_RUN_NAME" \
-    #       --quiet \
-    #       --region "europe-west1" \
-    #       --image eu.gcr.io/${{ secrets.GCLOUD_PROJECT }}/${{ secrets.GCLOUD_APP_NAME }}:${GITHUB_SHA} \
-    #       --platform "managed" \
-    #       --allow-unauthenticated
+    - name: Deploy
+      run: |-
+        echo "deploy to cloud run $CLOUD_RUN_NAME" && \
+        gcloud run deploy "$CLOUD_RUN_NAME" \
+          --quiet \
+          --region "europe-west1" \
+          --image eu.gcr.io/${{ secrets.GCLOUD_PROJECT }}/${{ secrets.GCLOUD_APP_NAME }}:${GITHUB_SHA} \
+          --platform "managed" \
+          --allow-unauthenticated
 
