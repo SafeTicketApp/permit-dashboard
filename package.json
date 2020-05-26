@@ -1,8 +1,8 @@
 {
-  "name": "ionic-conference-app",
+  "name": "permit-app",
   "version": "0.0.0",
-  "description": "Ionic Conference App",
-  "author": "Ionic Team <hi@ionicframework.com>",
+  "description": "SafeTicket Permit Frontend to generate permit codes",
+  "author": "SafeTicket Team <hallo@safeticketapp.de>",
   "license": "Apache-2.0",
   "scripts": {
     "ng": "ng",
