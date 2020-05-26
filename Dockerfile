@@ -18,7 +18,7 @@ RUN npm run build:prod
 
 # =====================
 # Stage 2 - webserver with nginx
-FROM base as app
+FROM nginx:1.12-alpine
 COPY --from=builder /app/www /usr/share/nginx/html
 COPY --from=builder /app/docker/nginx.conf /etc/nginx/conf.d/default.conf
 
