@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #loginForm="ngForm" novalidate>
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating" color="primary">Zweck</ion-label>
+        <ion-select
+          placeholder="Auswahl treffen" type="text" name="username"
+          [(ngModel)]="permit.reasonId" #reason="ngModel"
+          interface="popover" required
+        >
+          <ion-select-option value="TO-TOURISTIC">Touristic</ion-select-option>
+          <ion-select-option value="RE-RESIDENCE">Residence</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" color="primary">Anzahl</ion-label>
+        <ion-input [(ngModel)]="permit.amount" name="amount" type="number" #amount="ngModel" required></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-row>
+      <ion-col>
+        <ion-button color="tertiary" (click)="onLogin(loginForm)" type="submit" expand="block">Code erstellen</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-content>

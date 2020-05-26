@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Generierter Code</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Code</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="qr-code-outline" slot="start"></ion-icon>
+        <ion-text>{{generated.reasonAbbrevation}}-{{generated.code}}</ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
